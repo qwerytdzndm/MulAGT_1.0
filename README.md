@@ -29,7 +29,7 @@ Removed from this slim version:
 
 ## Install
 
-Use Python 3.11 or 3.12:
+Use Python 3.10:
 
 ```powershell
 cd C:\workplace\mul-main
