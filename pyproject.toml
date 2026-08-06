@@ -1,0 +1,35 @@
+﻿[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mul"
+version = "0.6.0"
+description = "A slim multi-agent coding workflow core with repository RAG."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "langgraph>=1.0,<2",
+  "langgraph-checkpoint-sqlite>=3,<4",
+  "openai>=1.100,<2",
+  "pydantic>=2.7,<3",
+  "pypdf>=6,<7",
+  "python-dotenv>=1,<2",
+  "qdrant-client>=1.18,<2",
+]
+
+[project.optional-dependencies]
+rag-models = [
+  "sentence-transformers>=5.6,<6",
+]
+documents = [
+  "numpy>=1.24,<2",
+  "opencv-python>=4.10,<4.12",
+  "docling>=2.115,<3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+mulagt-three-agents = "mulagt.agent_interface:main"
