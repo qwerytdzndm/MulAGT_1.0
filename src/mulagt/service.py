@@ -93,7 +93,7 @@ class MulagtService:
                     continue
             if not allowed:
                 raise PermissionError(
-                    "mul_sitory is outside MUL_WORKSPACE_ROOTS"
+                    "repository is outside MUL_WORKSPACE_ROOTS"
                 )
         mode = request.llm_mode or self.settings.llm_mode
         if mode not in {"mock", "deepseek"}:
@@ -409,7 +409,7 @@ class MulagtService:
         if changed_files and not already_rolled_back and not verification_succeeded:
             try:
                 rollback = self.suite.applier.rollback(
-                    statmul"],
+                    state["mul_path"],
                     runtime.run_id,
                     changed_files,
                     expected_applied_sha256=state.get(
