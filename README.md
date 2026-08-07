@@ -19,7 +19,7 @@ repository + issue
 ```
 ## Install
 
-Use Python 3.10:
+Use Python 3.11:
 
 ```powershell
 cd C:\workplace\mul-main
