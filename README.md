@@ -17,16 +17,6 @@ repository + issue
 -> allowlisted tests
 -> verification / rollback / report
 ```
-
-Removed from this slim version:
-
-- FastAPI service and static web UI
-- customer collaboration workspace
-- greenfield project factory / ZIP delivery flow
-- BYOK provider center and per-agent model routing
-- MCP server
-- Docker compose demo and end-to-end smoke scripts
-
 ## Install
 
 Use Python 3.10:
